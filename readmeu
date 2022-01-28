@@ -1,0 +1,14 @@
+npm init -y
+
+yarn add express body-parser nodemon
+yarn add sequelize-cli
+yarn add sequelize pg pg-hstore
+
+(dentro da pasta server)
+sequelize init
+
+Trocar no models/index
+// const model = sequelize['import'](path.join(__dirname, file));
+    var model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+
+yarn add njwt
